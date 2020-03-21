@@ -1,0 +1,80 @@
+<!doctype html>
+<HTML lang=es>
+    <HEAD>
+        <TITLE>Caverna</TITLE>
+        <META charset="UTF-8">
+        <META keywords="juego ensayo educacion DAM">
+        <META description="Test de juego">
+        <META author="G. Casas">
+        <META robots="Index,Follow">
+        <LINK rel="stylesheet" type="text/css" href="./css/normalize.css">
+            <style>
+                #container{
+                    width: 1100px;
+                    height: 500px;
+                    border:1px solid white;
+                    margin:0 auto;
+                }
+                #pantalla{
+                    margin:0 auto;
+                    margin-top: 30px;
+                    float: left;
+                }
+                .paneles{
+                    margin-top: 30px;
+                    width: 150px;
+                    margin-left:5%;
+                    float: left;
+                }
+                .titel{
+                    width: 100px;
+                    padding-left: 3px;
+                    border:1px solid black;
+                }
+                p{
+                    padding-left: 8px;
+                }
+                body{
+                    background-color: rgb(31, 31, 31);
+                    color:white;
+                }
+                #boton{
+                    margin-left: 80%;
+                }
+                h1{
+                    text-align: center;
+                }
+            </style>
+    </HEAD>
+    <BODY onload='inicializar(0);'>
+        <H1>Mazmorras</H1>
+        <div id='container'>
+            <div class='paneles' id='panel1'>
+                <p class='titel'>Nombre</p>
+                <p id='nombre0'></p><br>
+                <p class='titel'>Puntos</p>
+                <p id='punt0'></p><br>
+                <p class='titel'>Itens</p>
+                <p id='items0'></p>
+                <br>
+                <p id='nivel'></p><br>
+            </div>
+            <canvas id='pantalla' width="600" height="400" style='border:solid 2px black;'></canvas>
+            <div class='paneles' id='panel2'>
+                <p class='titel'>Nombre</p>
+                <p id='nombre1'></p><br>
+                <p class='titel'>Puntos</p>
+                <p id='punt1'></p><br>
+                <p class='titel'>Itens</p>
+                <p id='items1'></p>
+            </div>
+            <button id='boton' onclick="reproducir(1)">Con Sonido</button>
+        </div> 
+        <script src='./js/howler.core.js'></script>
+        <script src='./js/enemigo.js'></script>     
+        <script src='./js/personaje.js'></script>
+        <script src='./js/animados.js'></script>
+        <script src='./js/map.js'></script>   
+        <script src='./js/motor.js'></script>
+    </BODY>
+</HTML>
